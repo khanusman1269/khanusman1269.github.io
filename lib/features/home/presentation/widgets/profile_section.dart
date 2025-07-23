@@ -123,7 +123,7 @@ class _Summary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-        "Architect of Mobile Journeys | Android & Flutter Specialist | 4 Years From Code to Clicks | "
+        "Architect of Mobile Journeys | Android & Flutter Specialist | 4+ Years From Code to Clicks | "
         "On a Mission to Build the Future of Mobile",
         style: Theme.of(context).textTheme.bodyLarge);
   }
