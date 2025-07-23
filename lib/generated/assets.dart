@@ -22,6 +22,7 @@ class Assets {
   static const String iconJetpackCompose = 'assets/icon/jetpack_compose.webp';
   static const String iconKotlin = 'assets/icon/kotlin.svg';
   static const String iconLightMode = 'assets/icon/light_mode.svg';
+  static const String iconLink = 'assets/icon/link.svg';
   static const String iconLocation = 'assets/icon/location.svg';
   static const String iconMapbox = 'assets/icon/mapbox.svg';
   static const String iconMapboxNight = 'assets/icon/mapbox_night.svg';

@@ -6,6 +6,7 @@ import 'package:usman_portfolio/features/home/presentation/widgets/app_drawer.da
 import 'package:usman_portfolio/features/home/presentation/widgets/experience_section.dart';
 import 'package:usman_portfolio/features/home/presentation/widgets/nav_bar.dart';
 import 'package:usman_portfolio/features/home/presentation/widgets/profile_section.dart';
+import 'package:usman_portfolio/features/home/presentation/widgets/project_section.dart';
 import 'package:usman_portfolio/features/home/presentation/widgets/skills_section.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,7 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
             KeyedSubtree(key: homeKey, child: const ProfileSection()),
             KeyedSubtree(key: aboutKey, child: const AboutMeSection()),
             const SkillsSection(),
-            const ExperienceSection()
+            const ExperienceSection(),
+            const ProjectSection()
           ],
         ),
       ),
@@ -73,7 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
             KeyedSubtree(key: homeKey, child: const ProfileSection()),
             KeyedSubtree(key: aboutKey, child: const AboutMeSection()),
             const SkillsSection(),
-            const ExperienceSection()
+            const ExperienceSection(),
+            const ProjectSection()
           ],
         ),
       ),

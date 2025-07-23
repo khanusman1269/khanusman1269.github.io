@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:usman_portfolio/core/constants/app_constants.dart';
+import 'package:usman_portfolio/core/constants/app_typography.dart';
 import 'package:usman_portfolio/core/extensions/build_context_extension.dart';
 import 'package:usman_portfolio/core/extensions/sized_box.dart';
 import 'package:usman_portfolio/core/utils/utils.dart';
@@ -46,7 +47,7 @@ class _ExperienceItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.secondary,
             borderRadius: BorderRadius.circular(12.0)),
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
         child: LayoutBuilder(
@@ -145,7 +146,15 @@ class _Description extends StatelessWidget {
           padding: EdgeInsets.only(top: 8.0),
           child: Text("\u2022 "),
         ),
-        Expanded(child: Html(data: text))
+        Expanded(child: Html(data: text,
+        style: {
+          "body": Style(
+            fontFamily: AppTypography.body3Style.fontFamily,
+            fontSize: FontSize(AppTypography.body3Style.fontSize ?? 14),
+            fontWeight: AppTypography.body3Style.fontWeight,
+            lineHeight: LineHeight(AppTypography.body3Style.height),
+          )
+        }))
       ]));
       widgetList.add(4.height);
     }
