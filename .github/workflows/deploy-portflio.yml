@@ -31,7 +31,7 @@ jobs:
         run: npm run build
 
       - name: deploy to github pages
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish-dir: portfolio/build
