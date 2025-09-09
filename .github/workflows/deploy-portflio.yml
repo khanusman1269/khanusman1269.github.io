@@ -1,0 +1,38 @@
+name: Deploy Web App
+
+on:
+  push:
+    branches:
+      -main
+  workflow_dispatch:
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout worklow repo
+        uses: actions/checkout@v3
+
+      - name: Checkout web app repo
+        uses: actions/checkout@v3
+        with:
+          repository: khanusman1269/portfolio
+          token: ${{secrets.portfolio_secret}}
+          path: portfolio
+
+      - name: Setup Node.js
+        uses: actions/checkout@v3
+        with:
+          node-version: 20
+
+      - name: install dependencies
+        working-directory: portfolio
+        run: npm run build
+
+      - name: deploy to github pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish-dir: portfolio/build
+      
