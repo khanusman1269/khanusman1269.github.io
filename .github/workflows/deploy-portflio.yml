@@ -28,6 +28,10 @@ jobs:
 
       - name: install dependencies
         working-directory: portfolio
+        run: npm install
+
+      - name: Build
+        working-directory: portfolio
         run: npm run build
 
       - name: deploy to github pages
